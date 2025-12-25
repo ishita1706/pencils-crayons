@@ -10,7 +10,6 @@ export default function Home() {
       <div className="home-content">
         {/* Brand Header */}
         <div className="brand-header">
-          <img src={pencilImg} alt="Pencil brand icon" className="brand-icon" />
           <h1 className="brand-title">Pencils Crayons</h1>
           <img src={pencilImg} alt="Pencil brand icon" className="brand-icon" />
         </div>
@@ -19,9 +18,11 @@ export default function Home() {
         <h2 className="home-subtitle">Explore Our Collection</h2>
 
         {/* Categories */}
-        {categories.map((cat) => (
-          <CategoryCard key={cat.name} title={cat.name} img={cat.img} />
-        ))}
+        <div className="categories-grid">
+          {categories.map((cat) => (
+            <CategoryCard key={cat.name} title={cat.name} img={cat.img} />
+          ))}
+        </div>
       </div>
       
       <ContactStrip />
