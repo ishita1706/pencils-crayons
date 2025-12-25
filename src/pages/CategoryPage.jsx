@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import ContactStrip from "../components/ContactStrip";
 import { products } from "../data";
 import "./CategoryPage.css";
 
@@ -12,8 +13,8 @@ export default function CategoryPage() {
       <h1 style={{ textTransform: "capitalize" }}>{name} Products</h1>
 
       <div className="products-grid">
-        {categoryProducts.map((product, index) => (
-          <div key={index} className="product-card">
+        {categoryProducts.map((product) => (
+          <div key={product.name} className="product-card">
             <img src={product.img} alt={product.name} />
             <p>{product.name}</p>
           </div>
@@ -27,6 +28,8 @@ export default function CategoryPage() {
       >
         ← Back to Home
       </button>
+
+      <ContactStrip />
     </div>
   );
 }

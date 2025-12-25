@@ -16,12 +16,30 @@
   text-align: center;
 }
 
+.popup-message {
+  font-size: 13px;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
 .popup-container input {
   width: 100%;
-  margin-bottom: 15px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.error-message {
+  display: block;
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .popup-submit {
@@ -34,6 +52,11 @@
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 10px;
+}
+
+.popup-submit:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
 }
 
 .popup-close {
